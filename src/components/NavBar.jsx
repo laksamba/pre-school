@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/Logo.png";
 import dropdownIcon from "../assets/icons/Dropdown.png";
+import { Link } from "react-router-dom";
 
 
 const NavBar = () => {
@@ -14,15 +15,15 @@ const NavBar = () => {
     <nav className="bg-gray-100  py-2 px-6 md:px-12">
       <div className="flex justify-between items-center">
         {/* Logo */}
-        <div>
+        <Link to={'/'}>
           <img src={logo} alt="KIDs Care" className="h-14 md:h-20" />
-        </div>
+        </Link>
 
         {/* Navigation Links */}
         <div className="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
-          <a href="#" className="hover:text-blue-500 transition">
+          <Link  to="/about" className="hover:text-blue-500 transition">
             About
-          </a>
+          </Link>
 
           {/* Dropdown Menu */}
           <div className="relative">
@@ -42,43 +43,43 @@ const NavBar = () => {
 
             {isDropdownOpen && (
               <div className="absolute top-full left-0 bg-white shadow-lg rounded-lg mt-2 w-48 py-2 z-50 border border-gray-100">
-                <a
+                <Link
                   href="#"
                   className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
                 >
                   Early Learning
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
                   className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
                 >
                   Primary School
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
                   className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
                 >
                   After School
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
                   className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
                 >
                   Summer Camp
-                </a>
+                </Link>
               </div>
             )}
           </div>
 
-          <a href="#" className="hover:text-blue-500 transition">
+          <Link href="#" className="hover:text-blue-500 transition">
             Resources
-          </a>
-          <a href="#" className="hover:text-blue-500 transition">
+          </Link>
+          <Link to={'/sp'} className="hover:text-blue-500 transition">
             testimonial
-          </a>
-          <a href="#" className="hover:text-blue-500 transition">
+          </Link>
+          <Link href="#" className="hover:text-blue-500 transition">
             Instructor
-          </a>
+          </Link>
         </div>
 
         {/* Button */}
