@@ -1,8 +1,9 @@
 import React from 'react'
 
- const Spage = () => {
+const spage = () => {
   return (
     <div>spage</div>
   )
 }
-export default Spage
+
+export default spage

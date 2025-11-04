@@ -3,9 +3,9 @@ import React from 'react'
 
 const Detail = () => {
   return (
-      <section id='about'>
-        <div className="flex justify-between items-center ml-12 py-4 ">
-          <h1 className="text-4xl text-left font-bold  tracking-widest  py-8 ">
+      <section id=''>
+        <div className="flex justify-between items-center ml-12 py-4 bg-amber-300  px-4 mb-4">
+          <h1 className="text-4xl text-left font-bold  tracking-widest  py-8  ">
             Smart and clever Kids <br /> ready to <span className="text-purple-950"> Fly high</span>!
           </h1>
           <p className="text-center text-sm  text-gray-900 font-sans p-4 ">
