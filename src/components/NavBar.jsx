@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 import logo from "../assets/Logo.png";
 import dropdownIcon from "../assets/icons/Dropdown.png";
-import { Link } from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
 
 const NavBar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const location = useLocation(); 
 
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
   };
 
+  const isActive = (path) => location.pathname === path;
+
   return (
-    <nav className="bg-gray-100  py-2 px-6 md:px-12">
-      <div className="flex justify-between items-center">
+    <nav className="bg-white  py-2  ">
+      <div className="flex justify-between items-center pl-12">
         {/* Logo */}
         <Link to={'/'}>
           <img src={logo} alt="KIDs Care" className="h-14 md:h-20" />
@@ -21,7 +23,10 @@ const NavBar = () => {
 
         {/* Navigation Links */}
         <div className="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
-          <Link  to="/about" className="hover:text-blue-500 transition">
+          <Link
+            to="/about"
+            className={`hover:text-blue-500 transition ${isActive('/about') ? 'text-blue-500 font-bold' : ''}`}
+          >
             About
           </Link>
 
@@ -29,7 +34,7 @@ const NavBar = () => {
           <div className="relative">
             <button
               onClick={toggleDropdown}
-              className="flex items-center space-x-1 hover:text-blue-500 transition"
+              className={`flex items-center space-x-1 hover:text-blue-500 transition ${isActive('/program') || isDropdownOpen ? 'text-blue-500 font-bold' : ''}`}
             >
               <span>Program</span>
               <img
@@ -71,13 +76,22 @@ const NavBar = () => {
             )}
           </div>
 
-          <Link href="#" className="hover:text-blue-500 transition">
+          <Link
+            to={'/resource'}
+            className={`hover:text-blue-500 transition ${isActive('/resource') ? 'text-blue-500 font-bold' : ''}`}
+          >
             Resources
           </Link>
-          <Link to={'/sp'} className="hover:text-blue-500 transition">
+          <Link
+            to={'/testimonial'}
+            className={`hover:text-blue-500 transition ${isActive('/testimonial') ? 'text-blue-500 font-bold' : ''}`}
+          >
             testimonial
           </Link>
-          <Link href="#" className="hover:text-blue-500 transition">
+          <Link
+            href="#"
+            className={`hover:text-blue-500 transition ${isActive('/instructor') ? 'text-blue-500 font-bold' : ''}`}
+          >
             Instructor
           </Link>
         </div>

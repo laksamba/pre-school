@@ -4,7 +4,7 @@ import React from 'react'
 const Detail = () => {
   return (
       <section id=''>
-        <div className="flex justify-between items-center ml-12 py-4 bg-amber-300  px-4 mb-4">
+        <div className="flex justify-between items-center ml-12 py-4 bg-[#A8E6CF] px-4 mb-4">
           <h1 className="text-4xl text-left font-bold  tracking-widest  py-8  ">
             Smart and clever Kids <br /> ready to <span className="text-purple-950"> Fly high</span>!
           </h1>
@@ -19,7 +19,7 @@ const Detail = () => {
         </div>
 
         {/* cards */}
-        <div className=" flex justify-between ml-12 pb-4">
+        <div className=" flex justify-between ml-12 pb-4 gap-5 pt-2">
           <div
             className="w-[450px] h-96   shadow-lg bg-cover  bg-center flex items-end justify-center text-white border-8 border-green-400  hover:border-green-600 rounded-bl-4xl  rounded-tr-4xl "
             style={{ backgroundImage: "url('../src/assets/images/skill.png')" }}

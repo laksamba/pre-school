@@ -14,13 +14,13 @@ const Hero = () => {
   return (
    <div>
      <div>
-        <div>
+        <div className='bg-white'>
         <div id=''>
           {/* heading */}
-          <div className="flex justify-between mx-45 pt-10 items-center pb-5">
+          <div className="flex justify-between mx-45 pt-10 items-center pb-5 ">
             <img src={baloon} alt="img" className="h-16 -rotate-25" />
             
-            <h1 className="text-6xl font-extrabold font-cormorant text-center text-orange-900">
+            <h1 className="text-6xl font-extrabold font-cormorant text-center text-[#333333]">
               Putting your Child's Future <br /> in great motion
             </h1>
             <img src={Ball} alt="img" className="h-16 " />
@@ -32,7 +32,7 @@ const Hero = () => {
               <img src={child1} alt="" className="h-78" />
             </div>
             <div className="flex flex-col items-center gap-6 ">
-              <button className="text-white flex  font-sans bg-amber-600 px-5 py-3 rounded-bl-3xl rounded-tr-3xl shadow-sm border-gray-black border-2 hover:bg-amber-500 hover:shadow-lg font-semibold transition">
+              <button className="text-white flex  font-sans bg-linear-to-r from-pink-500 to-yellow-400 px-5 py-3 rounded-bl-3xl rounded-tr-3xl shadow-sm border-gray-black border-2 hover:bg-amber-500 hover:shadow-lg font-semibold transition">
                 <span>Start learning</span> <ArrowUpRight />
               </button>
               <p className="text-center text-sm  text-gray-700 font-sans">

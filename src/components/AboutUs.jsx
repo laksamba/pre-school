@@ -12,7 +12,7 @@ export const AboutUs = () => {
   };
   return (
     <div>
-      <div className="flex justify-center items-center bg-amber-300 ml-12">
+      <div className="flex justify-center items-center bg-[#A8E6CF] ml-12">
         <img src={graduate} alt="" className="h-48" />
         <h1 className="text-center text-6xl font-extrabold font-cormorant text-gray-800 tracking-wider">
           {["K", "I", "D", "S", " ", "C", "A", "R", "E"].map((letter, i) => (

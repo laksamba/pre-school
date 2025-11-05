@@ -37,10 +37,19 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-orange-50 via-pink-50 to-purple-50 mx-48 ">
-      {/* Hero Section */}
+    <div className="min-h-screen bg-linear-to-br from-orange-50 via-pink-50 to-purple-50 ml-12 ">
+       <div className=" rounded-3xl p-8 text-center ">
+          <h3 className="text-3xl font-bold text-gray-800 mb-4">
+            Ready to Join Our Family?
+          </h3>
+          <p className="text-lg text-gray-700 mb-6">
+            Come visit us and see why parents trust KidsCare for their children's early learning journey!
+          </p>
+          
+        </div>
+      
       <div className="bg-cover text-white w-full " style={{backgroundImage:"url(../src/assets/images/cover.png)"}}>
-        <div className="max-w-6xl mx-auto text-center bg-black/35 py-15 px-12 text-white ">
+        <div className="  text-center bg-black/35 py-15 px-12 text-white ">
           <div className="flex justify-center gap-3 mb-6 ">
             <Star className="w-10 h-10 animate-pulse" fill="yellow" />
             <Heart className="w-10 h-10 animate-pulse" fill="red" />
@@ -56,7 +65,7 @@ const About = () => {
       </div>
 
       
-      <div className="max-w-6xl mx-auto  py-16">
+      <div className=" mx-auto  py-16">
         {/* About Section */}
         <div className="bg-white rounded-3xl shadow-xl p-8 md:p-16 md:px-24 mb-16 border-4 border-yellow-300">
           <div className="flex items-center gap-3 mb-6">
@@ -81,7 +90,7 @@ const About = () => {
         </div>
 
         {/* Mission and Vision */}
-       <section className="container mx-auto  py-16 grid md:grid-cols-2 gap-8 max-w-6xl">
+       <section className="container   py-16 grid md:grid-cols-2 gap-8 ">
                <div className="bg-linear-to-br from-purple-500 to-purple-600 text-white p-8 rounded-2xl shadow-xl">
                  <div className="flex items-center gap-3 mb-4">
                    <div className="p-3 bg-white/20 rounded-full">
@@ -155,15 +164,7 @@ const About = () => {
         </div>
 
        
-        <div className=" rounded-3xl p-8 text-center ">
-          <h3 className="text-3xl font-bold text-gray-800 mb-4">
-            Ready to Join Our Family?
-          </h3>
-          <p className="text-lg text-gray-700 mb-6">
-            Come visit us and see why parents trust KidsCare for their children's early learning journey!
-          </p>
-          
-        </div>
+       
       </div>
     </div>
   );
