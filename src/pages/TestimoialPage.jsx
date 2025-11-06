@@ -1,57 +1,57 @@
-import React, { useState } from 'react';
-import coverImg from '../assets/images/parent1.png';
-import functionImg from '../assets/images/function.png';
-import imaginationImg from '../assets/images/imagination.png';
-import skillImg from '../assets/images/skill.png';
+import React, { useState } from "react";
+import coverImg from "../assets/images/parent1.png";
+import functionImg from "../assets/images/function.png";
+import imaginationImg from "../assets/images/imagination.png";
+import skillImg from "../assets/images/skill.png";
 
 const TestimonialPage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const testimonials = [
     {
-      name: 'Anusha Rimal ',
-      child: 'Emma, Age 7',
+      name: "Anusha Rimal",
+      child: "Emma, Age 7",
       quote:
-        'Best school for my brother, caring and friendly teachers, loved your school',
+        "Best school for my brother, caring and friendly teachers, loved your school",
       image: coverImg,
     },
     {
-      name: 'Michael Chen',
-      child: 'Liam, Age 9',
+      name: "Michael Chen",
+      child: "Liam, Age 9",
       quote:
-        'The teachers are amazing! My son looks forward to every session. His reading speed has doubled in just 3 months.',
+        "The teachers are amazing! My son looks forward to every session. His reading speed has doubled in just 3 months.",
       image: functionImg,
     },
     {
-      name: 'Priya Sharma',
-      child: 'Aarav, Age 6',
+      name: "Priya Sharma",
+      child: "Aarav, Age 6",
       quote:
-        'I love how creative the activities are. My child comes home excited to tell me what he learned. Highly recommend!',
+        "I love how creative the activities are. My child comes home excited to tell me what he learned. Highly recommend!",
       image: imaginationImg,
     },
     {
-      name: 'David & Lisa Miller',
-      child: 'Sophie, Age 8',
+      name: "David & Lisa Miller",
+      child: "Sophie, Age 8",
       quote:
-        'As parents, we feel supported and informed. The progress reports are detailed and the staff truly cares.',
+        "As parents, we feel supported and informed. The progress reports are detailed and the staff truly cares.",
       image: skillImg,
     },
   ];
 
   return (
-    <div className="min-h-screen bg-[#FFFFFF] py-12 px-4">
+    <div className="bg-white py-10 ">
       {/* Header */}
-      <div className="text-center mb-12   p-2 ">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+      <div className="text-center mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3 tracking-wide">
           What Parents Say
         </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="text-sm md:text-base text-gray-600 max-w-xl mx-auto">
           Real stories from families who’ve seen the difference.
         </p>
       </div>
 
       {/* Cards */}
-      <div className="flex gap-4 l ml-12 h-96">
+      <div className="flex gap-4 ml-12 h-80 ">
         {testimonials.map((t, idx) => {
           const isActive = activeIndex === idx;
 
@@ -60,52 +60,53 @@ const TestimonialPage = () => {
               key={idx}
               onClick={() => setActiveIndex(idx)}
               className={`
-                ${isActive ? 'w-full' : 'w-1/5'}
-                relative overflow-hidden rounded-2xl shadow-xl cursor-pointer
+                ${isActive ? "w-full" : "w-1/5"}
+                relative overflow-hidden rounded-2xl shadow-lg cursor-pointer
                 transition-all duration-700 ease-in-out transform hover:scale-[1.02]
                 flex flex-col justify-center
               `}
               style={{
                 background: isActive
-                  ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
-                  : '#e5e7eb',
+                  ? "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+                  : "#f3f4f6",
               }}
             >
-              {/* Inactive – only avatar */}
+              {/* Inactive card */}
               {!isActive ? (
-                <div className="flex flex-col bg-[#E6E6FA] items-center justify-center h-full p-4">
+                <div className="flex flex-col bg-[#E6E6FA] items-center justify-center h-full p-3">
                   <img
                     src={t.image}
                     alt={t.name}
-                    className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-md"
+                    className="w-14 h-14 rounded-full object-cover border-4 border-white shadow-md"
                   />
-                  <p className='text-[#333333]'>{t.name}</p>
+                  <p className="text-[#333333] text-sm mt-2 font-medium">
+                    {t.name}
+                  </p>
                 </div>
               ) : (
-                /* Active – full content */
-                <div className="px-8 py-6 text-white">
-                  <div className="flex items-center gap-4 mb-4">
+                // Active card
+                <div className="px-6 py-5 text-white">
+                  <div className="flex items-center gap-3 mb-3">
                     <img
                       src={t.image}
                       alt={t.name}
-                      className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg shrink-0"
+                      className="w-14 h-14 rounded-full object-cover border-4 border-white shadow-lg shrink-0"
                     />
                     <div>
-                      <h3 className="text-xl font-bold">{t.name}</h3>
-                      <p className="text-sm opacity-90">{t.child}</p>
+                      <h3 className="text-base font-semibold">{t.name}</h3>
+                      <p className="text-xs opacity-90">{t.child}</p>
                     </div>
                   </div>
 
-                  <blockquote className="text-lg italic leading-relaxed">
+                  <blockquote className="text-sm italic leading-relaxed">
                     “{t.quote}”
                   </blockquote>
 
-                  {/* 5-star rating */}
-                  <div className="flex mt-4">
+                  <div className="flex mt-3">
                     {[...Array(5)].map((_, i) => (
                       <svg
                         key={i}
-                        className="w-5 h-5 text-yellow-400"
+                        className="w-4 h-4 text-yellow-400"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >

@@ -1,6 +1,7 @@
 import React from "react";
 import { Instagram, Linkedin, Mail } from "lucide-react";
 import teacher from '../assets/images/teacher.png'
+import { Link } from "react-router-dom";
 
 
 const instructors = [
@@ -75,9 +76,15 @@ const Instructors = () => {
         <p className="text-gray-700 mb-4">
           Are you passionate about early childhood education? We’re always looking for caring educators to join us.
         </p>
-        <button className="bg-gray-800 hover:bg-gray-600 text-white px-6 py-2 rounded-full font-medium transition-all">
-          Apply Now
-        </button>
+          <Link
+ to="https://wa.me/9779814983127?text=Hello!%20I%27m%20interested%20in%20applying%20for%20a%20teaching%20position%20at%20KidsCare%20Preschool."
+                      target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gray-800 hover:bg-gray-600 text-white px-6 py-2 rounded-full font-medium transition-all"
+         >
+                    Apply Now
+                  </Link>
+       
       </div>
     </section>
   );

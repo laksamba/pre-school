@@ -15,7 +15,7 @@ const Resources = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-orange-50 to-yellow-50 py-20 px-6 md:px-16 lg:px-24">
+    <div className="min-h-screen bg-linear-to-br from-pink-50 via-orange-50 to-yellow-50 py-20 px-6 md:px-16 lg:px-24">
       {/* Header */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-800 mb-2">
@@ -36,7 +36,7 @@ const Resources = () => {
             onClick={() => toggleSection(0)}
           >
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-gradient-to-br from-orange-400 to-pink-500 text-white rounded-full">
+              <div className="p-3 bg-linear-to-br from-orange-400 to-pink-500 text-white rounded-full">
                 <BookOpen className="w-7 h-7" />
               </div>
               <div>
@@ -84,7 +84,7 @@ const Resources = () => {
             onClick={() => toggleSection(1)}
           >
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-gradient-to-br from-orange-400 to-pink-500 text-white rounded-full">
+              <div className="p-3 bg-linear-to-br from-orange-400 to-pink-500 text-white rounded-full">
                 <FileText className="w-7 h-7" />
               </div>
               <div>
@@ -127,7 +127,7 @@ const Resources = () => {
             onClick={() => toggleSection(2)}
           >
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-gradient-to-br from-orange-400 to-pink-500 text-white rounded-full">
+              <div className="p-3 bg-linear-to-br from-orange-400 to-pink-500 text-white rounded-full">
                 <HeartHandshake className="w-7 h-7" />
               </div>
               <div>
@@ -169,7 +169,7 @@ const Resources = () => {
             onClick={() => toggleSection(3)}
           >
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-gradient-to-br from-orange-400 to-pink-500 text-white rounded-full">
+              <div className="p-3 bg-linear-to-br from-orange-400 to-pink-500 text-white rounded-full">
                 <Palette className="w-7 h-7" />
               </div>
               <div>

@@ -13,6 +13,7 @@ import TestimoialPage from "./pages/TestimoialPage";
 import Resources from "./pages/Resources";
 import Footer from "./components/Footer";
 import Instructors from "./pages/InstructorPage";
+import { AdmissionInfo } from "./pages/Admission";
 
 
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/resource" element={<Resources/>}/>
         <Route path="/instructor" element={<Instructors/>}/>
+        <Route path="/admission" element={<AdmissionInfo/>}/>
 
         </Routes>
         <Footer/>
