@@ -12,12 +12,13 @@ import ScrollToTop from "./helper/ScrollToTop";
 import TestimoialPage from "./pages/TestimoialPage";
 import Resources from "./pages/Resources";
 import Footer from "./components/Footer";
+import Instructors from "./pages/InstructorPage";
 
 
 
 function App() {
   return (
-    <div className="px-18">
+    <div className="">
       <BrowserRouter>
       <NavBar/>
       <ScrollToTop/>
@@ -28,6 +29,7 @@ function App() {
         <Route path="/testimonial" element={<TestimoialPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/resource" element={<Resources/>}/>
+        <Route path="/instructor" element={<Instructors/>}/>
 
         </Routes>
         <Footer/>
