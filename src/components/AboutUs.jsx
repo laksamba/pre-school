@@ -73,7 +73,7 @@ export const AboutUs = () => {
               Where Little Learners Grow Big Dreams
             </p>
 
-            <button className="flex items-center justify-center gap-2 bg-amber-500 px-4 sm:px-6 py-2 sm:py-3 my-5 rounded-2xl mx-auto text-sm sm:text-base font-semibold hover:bg-amber-400 transition">
+            <button className="flex items-center justify-center gap-2 bg-amber-500 px-4 sm:px-6 py-2 sm:py-3 my-5 rounded-2xl mx-auto text-sm sm:text-base font-semibold hover:bg-amber-400 transition hover:scale-105">
               Learn more <ArrowRight size={18} />
             </button>
           </div>

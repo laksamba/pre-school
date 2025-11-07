@@ -31,7 +31,7 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col items-center gap-3 sm:gap-6">
-            <Link to={'/admission'} className="text-white flex items-center gap-2 font-sans bg-linear-to-r from-pink-500 to-yellow-400 px-3 py-2 sm:px-5 sm:py-3 rounded-bl-2xl rounded-tr-2xl shadow-sm border-gray-black border-2 hover:bg-amber-500 hover:shadow-lg font-semibold text-xs sm:text-base transition">
+            <Link to={'/admission'} className="text-white flex items-center gap-2 font-sans bg-linear-to-r from-pink-500 to-yellow-400 px-3 py-2 sm:px-5 sm:py-3 rounded-bl-2xl rounded-tr-2xl shadow-sm border-gray-black border-2 hover:bg-linear-to-r hover:from-pink-600 hover:to-yellow-500 hover:shadow-lg font-semibold text-xs sm:text-base transition hover:scale-105">
               <span>Start learning</span> <ArrowUpRight size={14} />
             </Link>
 
